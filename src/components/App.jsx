@@ -7,11 +7,11 @@ import CreateArea from "./CreateArea";
 function App() {
   const [notesList, setNoteList] = useState([]);
 
-  const endpoint = "https://keeperserver-production.up.railway.app";
+  const endpoint = "https://frantic-lion-windbreaker.cyclic.app";
 
   useEffect(() => {
     fetch(`${endpoint}/notes`)
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
         (result) => {
           setNoteList(result);
@@ -19,7 +19,7 @@ function App() {
         (error) => {
           console.log(error);
         }
-      )
+      );
   }, []);
 
   function addNote(note) {
@@ -27,11 +27,12 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
       },
-      body: JSON.stringify(note)
-    }).then(response => response.json())
-      .then(response => {
+      body: JSON.stringify(note),
+    })
+      .then((response) => response.json())
+      .then((response) => {
         setNoteList(response);
       });
   }
@@ -41,11 +42,12 @@ function App() {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
       },
-      body: JSON.stringify({ noteId: id })
-    }).then(response => response.json())
-      .then(response => {
+      body: JSON.stringify({ noteId: id }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
         setNoteList(response);
       });
   }
