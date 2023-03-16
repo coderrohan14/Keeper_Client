@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Keeper_Client/static/js/main.919b2a97.js",
+    "main.js": "/Keeper_Client/static/js/main.f92f0c70.js",
     "index.html": "/Keeper_Client/index.html",
-    "main.919b2a97.js.map": "/Keeper_Client/static/js/main.919b2a97.js.map"
+    "main.f92f0c70.js.map": "/Keeper_Client/static/js/main.f92f0c70.js.map"
   },
   "entrypoints": [
-    "static/js/main.919b2a97.js"
+    "static/js/main.f92f0c70.js"
   ]
 }
